@@ -9,20 +9,22 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Destination> destinations = [
       Destination(
-        title: "Cape Town",
-        subtitle: "Table Mountain · Waterfront",
-        imageUrl: "https://picsum.photos/400/300?1",
+        name: "Cape Town",
+        location: "Table Mountain · Waterfront",
+        image: "https://picsum.photos/400/300?1",
         description:
             "Cape Town is famous for its iconic Table Mountain, beautiful beaches, and vibrant culture.",
         rating: 4.8,
+        category: "City", 
       ),
       Destination(
-        title: "Durban",
-        subtitle: "Beaches · Ushaka Marine",
-        imageUrl: "https://picsum.photos/400/300?2",
+        name: "Durban",
+        location: "Beaches · Ushaka Marine",
+        image: "https://picsum.photos/400/300?2",
         description:
             "Durban offers warm beaches, rich Indian culture, and some of the best food in South Africa.",
         rating: 4.6,
+        category: "City",
       ),
     ];
 
