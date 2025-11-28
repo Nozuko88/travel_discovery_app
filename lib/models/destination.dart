@@ -5,6 +5,8 @@ class Destination {
   final String description;
   final double rating;
   final String category;
+  final double latitude;
+  final double longitude;
 
   Destination({
     required this.name,
@@ -13,5 +15,7 @@ class Destination {
     required this.description,
     required this.rating,
     required this.category,
+    required this.latitude,
+    required this.longitude,
   });
 }

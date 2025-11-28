@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import '../models/destination.dart';
 import '../widgets/destination_card.dart';
-
+import '../data/destinations_data.dart'; 
 class FavouritesScreen extends StatefulWidget {
   const FavouritesScreen({super.key});
 
@@ -21,13 +21,14 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    
     List<Destination> favoriteDestinations = destinations
         .where((d) => favBox.containsKey(d.name))
         .toList();
 
     if (favoriteDestinations.isEmpty) {
       return const Center(
-        child: Text('No favorites yet 😞', style: TextStyle(fontSize: 16)),
+        child: Text('No favorites yet ', style: TextStyle(fontSize: 16)),
       );
     }
 

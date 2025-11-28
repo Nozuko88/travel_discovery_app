@@ -15,7 +15,10 @@ class HomeScreen extends StatelessWidget {
         description:
             "Cape Town is famous for its iconic Table Mountain, beautiful beaches, and vibrant culture.",
         rating: 4.8,
-        category: "City", 
+        category: "City",
+        latitude: -33.9249,
+        longitude: 18.4241,
+
       ),
       Destination(
         name: "Durban",
@@ -25,7 +28,22 @@ class HomeScreen extends StatelessWidget {
             "Durban offers warm beaches, rich Indian culture, and some of the best food in South Africa.",
         rating: 4.6,
         category: "City",
+        latitude: -29.8587,
+        longitude: 31.0218,
+
       ),
+
+      Destination(
+        name: "Krugar Park",
+        location: "Mpumalanga",
+        image: "https://picsum.photos/400/300?2",
+        description:
+            "A large game reserve in South Africa...",
+        rating: 4.9,
+        category: "Nature",
+        latitude: -23.9884,
+        longitude: 31.5547,
+      )
     ];
 
     return Scaffold(

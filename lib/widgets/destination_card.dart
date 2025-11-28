@@ -33,6 +33,33 @@ class _DestinationCardState extends State<DestinationCard> {
     setState(() {});
   }
 
+  Widget buildImage(String path) {
+    if (path.startsWith('http')) {
+      
+      return Image.network(
+        path,
+        height: 200,
+        width: double.infinity,
+        fit: BoxFit.cover,
+        errorBuilder: (context, error, stackTrace) {
+          return Container(
+            height: 200,
+            color: Colors.grey.shade300,
+            child: const Center(child: Icon(Icons.broken_image, size: 40)),
+          );
+        },
+      );
+    } else {
+      
+      return Image.asset(
+        path,
+        height: 200,
+        width: double.infinity,
+        fit: BoxFit.cover,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -56,12 +83,7 @@ class _DestinationCardState extends State<DestinationCard> {
               tag: widget.destination.image,
               child: ClipRRect(
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-                child: Image.asset(
-                  widget.destination.image,
-                  height: 200,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                ),
+                child: buildImage(widget.destination.image),
               ),
             ),
 
